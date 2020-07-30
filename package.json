@@ -1,0 +1,42 @@
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm-run-all -p build-task:css build-task:js",
+    "build-task:css": "npm-run-all -s build-task:sass-to-css build-task:postcss-autoprefixer build-task:css-to-mincss",
+    "build-task:sass-to-css": "node-sass src/ -o src/",
+    "build-task:postcss-autoprefixer": "postcss src/style.min.css --use autoprefixer -d src/style.min.css",
+    "build-task:css-to-mincss": "cleancss --source-map -o src/style.min.css src/*.css",
+    "build-task:js": "npm-run-all -s build-task:ts-to-js build-task:js-uglify",
+    "build-task:ts-to-js": "tsc",
+    "build-task:js-uglify": "uglifyjs-folder src -eo src --pattern '**/*.js,!**/*min.js'",
+    "dev": "npm-run-all -p dev-task:*",
+    "dev-task:live-server": "live-server --port=3000",
+    "dev-task:watch-sass-to-css": "node-sass -w src/ -o src/",
+    "dev-task:watch-ts-to-js": "tsc-watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/as-one/starter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/as-one/starter/issues"
+  },
+  "homepage": "https://github.com/as-one/starter#readme",
+  "dependencies": {
+    "autoprefixer": "^9.8.5",
+    "clean-css-cli": "^4.3.0",
+    "live-server": "^1.2.1",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.1",
+    "tsc-watch": "^4.2.9",
+    "typescript": "^3.9.7",
+    "uglifyjs-folder": "^2.0.0"
+  }
+}
