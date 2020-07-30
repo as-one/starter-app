@@ -1,6 +1,6 @@
 # As One - Starter
 
-This repository contains the ideal configuration to start projects on HTML, CSS, JS, and framework agnostic.
+This repository contains the ideal configuration to start projects on HTML, CSS/SCSS, Vanilla JS, and TypeScript.
 
 ## Quick Start
 
@@ -18,9 +18,7 @@ npm run build
 
 ## Explanation
 
-In this accelerated world of web development is important to stay on the shoulders of non-depreciable dependencies. Likewise, it's to keep focused on having core technologies (HTML, CSS, JS, git) and core companies (GitHub, NPM).
-
-That's why the dependencies were chosen carefully to prevent rework.
+In this accelerated world of web development is important to stay on the shoulders of non-depreciable dependencies. Likewise, it's important to keep focused on core technologies (HTML, CSS, JS, git) and companies (GitHub, NPM).
 
 ## Development
 
@@ -50,8 +48,8 @@ This command will initialize sequentially:
 
 ## Details
 
-In any command, there will be no creation of additional folders (like ./dist): all files created will be in the same folder of its references. If it's necessary, understand carefully and update the scripts object in package.json.
+In any command, there will be no creation of additional folders (like ./dist): all files created will be in the same folder of its references. If something different is necessary, read carefully and update the scripts object in the package.json file.
 
 ## Need something else?
 
-If you have questions or suggestions please open an issue!
+If you have questions or suggestions please open an issue.
