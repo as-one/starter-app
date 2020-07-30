@@ -1,6 +1,6 @@
 # As One - Starter
 
-Este repositório contém a configuração ideal para começar projetos que trabalhem com HTML, CSS e JS e framework agnostic.
+This repository contains the ideal configuration to start projects on HTML, CSS, JS, and framework agnostic.
 
 ## Quick Start
 
@@ -10,44 +10,48 @@ npm run dev
 npm run build
 ```
 
+## Status
+
+[![npm version](https://img.shields.io/badge/npm-v6.13.4-blue)]()
+[![peerDependencies Status](https://img.shields.io/badge/peer%20dependencies-up%20to%20date-brightgreen)]()
+[![devDependency Status](https://img.shields.io/badge/dev--dependencies-up%20to%20date-brightgreen)]()
+
 ## Explanation
 
-Neste universo acelerado do desenvolvimento web é fundamental estarmos posicionados firmemente em projetos que não serão depreciados. Desta maneira, é fundamental estar dependente apenas de tecnologias core (HTML, CSS, JS) e empresas core (git, GitHub, NPM).
+In this accelerated world of web development is important to stay on the shoulders of non-depreciable dependencies. Likewise, it's to keep focused on having core technologies (HTML, CSS, JS, git) and core companies (GitHub, NPM).
 
-Por isso, as dependências foram escolhidas cuidadosamente para não haver futuro retrabalho vindo de dependências depreciadas.
+That's why the dependencies were chosen carefully to prevent rework.
 
-## npm run dev
+## Development
 
 ```
 npm run dev
 ```
 
-Este comando inicializará paralelamente:
+This command will initialize at the same time:
 
-- Um servidor na porta 3000: http://localhost:3000;
-- Um watcher SASS para CSS a partir da pasta ./src;
-- Um watcher TS to JS a partir da root ./;
+- A server on port 3000: http://localhost:3000;
+- A watcher SASS to CSS from folder ./src;
+- A watcher TS to JS from the root ./;
 
-As dependências utilizadas estão em desenvolvimento há anos e em constante atualização.
-
-## npm run build
+## Production
 
 ```
 npm run build
 ```
 
-Este comando inicializará sequencialmente:
+This command will initialize sequentially:
 
-- CSS: Compilação de cada SASS para CSS a partir da pasta ./src;
-- CSS: Compilação de todos os CSS para um único ./src/style.min.css a partir da pasta ./src;
-- CSS: Compilação do ./src/style.min.css com PostCSS e seu plugin Autoprefixer;
-- JS: Compilação de TS para JS a partir da root ./;
-- JS: Uglify de cada JS visando minificação.
+- CSS: Compilation of each SASS to CSS from folder ./src;
+- CSS: Compilation of all CSS to one file named ./src/style.min.css from folder ./src;
+- CSS: Compilation of the ./src/style.min.css using PostCSS and its plugin Autoprefixer;
+- JS: Compilation from TS to JS from the root ./;
+- JS: Uglify of each JS aiming minification.
 
 ## Details
 
-Não há criação de pasta adicionais (como ./dist): todos os arquivos criados a partir da compilação estarão na mesma pasta de seus arquivos de referência. Caso isso seja necessário, entenda com calma os scripts em package.json
+In any command, there will be no creation of additional folders (like ./dist): all files created will be in the same folder of its references. If it's necessary, understand carefully and update the scripts object in package.json.
 
 ## Need something else?
 
-Para dúvidas e sugestões é só enviar uma issue para nós!
+If you have questions or suggestions please open an issue!
