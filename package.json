@@ -13,7 +13,7 @@
     "build:sass-to-css": "node-sass src/ -o src/",
     "build:postcss-autoprefixer": "postcss src/*.css --use autoprefixer -d src/",
     "build:css-to-mincss": "cleancss --source-map -o dist/style.min.css src/*.css",
-    "build:js": "npm-run-all -s build:ts-to-js build:js-uglify",
+    "build:js": "npm-run-all -s build:ts-to-js build:babel build:js-uglify",
     "build:ts-to-js": "tsc src/*ts --outDir src/",
     "build:babel": "babel src -d src",
     "build:js-uglify": "uglifyjs-folder src -eo dist --pattern '**/*.js,!**/*min.js'",
