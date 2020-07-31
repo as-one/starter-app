@@ -1,8 +1,8 @@
 {
-  "name": "starter",
+  "name": "As One - Starter",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "The ideal configuration to start projects on HTML, CSS/SCSS, Vanilla JS, and TypeScript.",
+  "main": "index.html",
   "scripts": {
     "build": "npm-run-all -s build:html build:css build:js",
     "build:html": "npm-run-all -s build:copy-html build:replace-in-html build:html-minifier",
@@ -27,7 +27,7 @@
     "url": "git+https://github.com/as-one/starter.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "As One",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/as-one/starter/issues"

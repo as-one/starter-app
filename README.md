@@ -14,9 +14,9 @@
   The ideal configuration to start projects on HTML, CSS/SCSS, Vanilla JS, and TypeScript.
   <br>
   <br>
-  <a href="https://github.com/as-one/starter/issues/new?template=bug_report.md">Report bug</a>
+  <a href="https://github.com/as-one/starter/issues/new">Report bug</a>
   ·
-  <a href="https://github.com/as-one/starter/issues/new?template=feature_request.md">Request feature</a>
+  <a href="https://github.com/as-one/starter/issues/new">Request feature</a>
 </p>
 
 ## Quick Start
