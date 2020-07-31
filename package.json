@@ -4,19 +4,7 @@
   "description": "The ideal boilerplate to start projects on HTML, CSS/SCSS, Vanilla JS, and TypeScript.",
   "main": "index.html",
   "scripts": {
-    "build": "npm-run-all -s build:html build:css build:js",
-    "build:html": "npm-run-all -s build:copy-html build:replace-in-html build:html-minifier",
-    "build:copy-html": "copyfiles *.html src/*.html src/**/*.html src/**/**/*.html dist",
-    "build:replace-in-html": "replace-in-file .css .min.css dist/* && replace-in-file .css .min.css dist/src/* && replace-in-file .css .min.css dist/src/**/* && replace-in-file .css .min.css dist/src/**/**/*",
-    "build:html-minifier": "html-minifier dist/*.html -o dist/*.html --collapse-whitespace && html-minifier dist/src/*.html -o dist/src/*.html --collapse-whitespace && html-minifier dist/src/**/*.html -o dist/src/**/*.html --collapse-whitespace && html-minifier dist/src/**/**/*.html -o dist/src/**/**/*.html --collapse-whitespace",
-    "build:css": "npm-run-all -s build:sass-to-css build:postcss-autoprefixer build:css-to-mincss",
-    "build:sass-to-css": "node-sass -r src/ -o src/",
-    "build:postcss-autoprefixer": "postcss src/*.css --use autoprefixer -r && postcss src/**/*.css --use autoprefixer -r && postcss src/**/**/*.css --use autoprefixer -r",
-    "build:css-to-mincss": "cleancss --source-map -o dist/style.min.css src/*.css src/**/*.css src/**/**/*.css",
-    "build:js": "npm-run-all -s build:ts-to-js build:babel build:js-uglify",
-    "build:ts-to-js": "recursive-tsc .",
-    "build:babel": "babel src -d src",
-    "build:js-uglify": "uglifyjs-folder src -eo dist --pattern '**/*.js,!**/*min.js'",
+    "build": "node build.js",
     "dev": "npm-run-all -p dev:*",
     "dev:live-server": "live-server --port=3000",
     "dev:watch-sass-to-css": "node-sass -w src/ -o src/",
@@ -49,5 +37,8 @@
     "tsc-watch": "^4.2.9",
     "typescript": "^3.9.7",
     "uglifyjs-folder": "^2.0.0"
+  },
+  "dependencies": {
+    "foreach-cli": "^1.8.1"
   }
 }
