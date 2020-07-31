@@ -18,7 +18,7 @@ npm run build
 
 ## Overview
 
-In this accelerated world of web development is important to stay on the shoulders of non-depreciable dependencies. Likewise, it's important to keep focused on core technologies (HTML, CSS, JS, git) and companies (GitHub, NPM).
+In this accelerated world of web development is key to stay on the shoulders of non-depreciable dependencies. Likewise, it's important to keep focused on core technologies (HTML, CSS, JS, git) and companies (GitHub, NPM).
 
 ## Development
 
