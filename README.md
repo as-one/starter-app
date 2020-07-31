@@ -11,7 +11,7 @@
 <br>
 
 <p align="center">
-  The ideal boilerplate to start projects on HTML, CSS/SCSS, Vanilla JS, and TypeScript.
+  The ideal boilerplate to start projects with HTML, CSS/SCSS, Vanilla JS, and TypeScript.
   <br>
   <br>
   <a href="https://github.com/as-one/starter/issues/new">Report bug</a>
@@ -35,7 +35,7 @@ npm run build
 
 ## Overview
 
-In this accelerated world of web development is key to stay on the shoulders of non-depreciable dependencies. Likewise, it's important to keep focused on core technologies (HTML, CSS, JS, git) and companies (GitHub, NPM).
+In this accelerated world of web development is key to stay on the shoulders of non-depreciable dependencies. Likewise, it's important to keep close to core technologies (HTML, CSS, JS, git) and companies (GitHub, NPM).
 
 ## Development
 
