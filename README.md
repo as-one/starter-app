@@ -1,10 +1,18 @@
-# As One - Starter Kit
-
 <p align="center">
   <img src="https://raw.githubusercontent.com/as-one/starter/master/starter.png" alt="As One - Starter Kit" width="328" height="122">
 </p>
 
-This project contains the ideal configuration to start projects on HTML, CSS/SCSS, Vanilla JS, and TypeScript.
+<br>
+<br>
+
+<p align="center">
+  The ideal configuration to start projects on HTML, CSS/SCSS, Vanilla JS, and TypeScript.
+  <br>
+  <br>
+  <a href="https://github.com/as-one/starter/issues/new?template=bug_report.md">Report bug</a>
+  ·
+  <a href="https://github.com/as-one/starter/issues/new?template=feature_request.md">Request feature</a>
+</p>
 
 ## Quick Start
 
