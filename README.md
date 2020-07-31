@@ -67,10 +67,10 @@ This command will initialize sequentially:
 
 ## Details
 
+- All CSS, SASS, JavaScript, and TypeScript files should be in ./src;
 - The build process outputs all files in the ./dist;
 - The build process bundles CSS files into one named style.min.css;
 - The build process outputs JS files separately;
-- All CSS, SASS, JavaScript, and TypeScript files should be in ./src;
 - If something different is necessary, read carefully and update the scripts object in the package.json file.
 
 ## Need something else?
