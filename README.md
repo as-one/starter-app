@@ -30,7 +30,7 @@ This command will initialize at the same time:
 
 - A server on port 3000: http://localhost:3000;
 - A watcher SASS to CSS from ./src;
-- A watcher TS to JS from the root ./;
+- A watcher TS to JS from ./src;
 
 ## Production
 
@@ -40,11 +40,11 @@ npm run build
 
 This command will initialize sequentially:
 
-- CSS: Compilation of each SASS to CSS from ./src;
-- CSS: Compilation of all CSS to one file named ./src/style.min.css from ./src;
-- CSS: Compilation of the ./src/style.min.css using PostCSS and its plugin Autoprefixer;
-- JS: Compilation from TS to JS from the root ./;
-- JS: Uglify of each JS aiming minification.
+- HTML: Minification of index.html to ./dist;
+- CSS: Compilation of all SASS in ./src to to one minified CSS file ./dist/style.min.css;
+- CSS: Parsing of minified CSS using PostCSS's Autoprefixer;
+- JS: Compilation from TS to JS in ./src;
+- JS: Uglify of each JS aiming minification which will be sent to ./dist.
 
 ## Details
 

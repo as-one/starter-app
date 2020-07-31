@@ -14,7 +14,8 @@
     "build:postcss-autoprefixer": "postcss src/*.css --use autoprefixer -d src/",
     "build:css-to-mincss": "cleancss --source-map -o dist/style.min.css src/*.css",
     "build:js": "npm-run-all -s build:ts-to-js build:js-uglify",
-    "build:ts-to-js": "tsc",
+    "build:ts-to-js": "tsc src/*ts --outDir src/",
+    "build:babel": "babel src -d src",
     "build:js-uglify": "uglifyjs-folder src -eo dist --pattern '**/*.js,!**/*min.js'",
     "dev": "npm-run-all -p dev:*",
     "dev:live-server": "live-server --port=3000",
@@ -33,6 +34,8 @@
   },
   "homepage": "https://github.com/as-one/starter#readme",
   "dependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.0",
     "autoprefixer": "^9.8.5",
     "clean-css-cli": "^4.3.0",
     "copyfiles": "^2.3.0",
