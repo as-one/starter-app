@@ -11,7 +11,7 @@
 <br>
 
 <p align="center">
-  The ideal configuration to start projects on HTML, CSS/SCSS, Vanilla JS, and TypeScript.
+  The ideal boilerplate to start projects on HTML, CSS/SCSS, Vanilla JS, and TypeScript.
   <br>
   <br>
   <a href="https://github.com/as-one/starter/issues/new">Report bug</a>

@@ -1,7 +1,7 @@
 {
   "name": "As One - Starter",
   "version": "1.0.0",
-  "description": "The ideal configuration to start projects on HTML, CSS/SCSS, Vanilla JS, and TypeScript.",
+  "description": "The ideal boilerplate to start projects on HTML, CSS/SCSS, Vanilla JS, and TypeScript.",
   "main": "index.html",
   "scripts": {
     "build": "npm-run-all -s build:html build:css build:js",
