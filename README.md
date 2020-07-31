@@ -44,6 +44,7 @@ This command will initialize sequentially:
 - CSS: Compilation of all SASS in ./src to to one minified CSS file ./dist/style.min.css;
 - CSS: Parsing of minified CSS using PostCSS's Autoprefixer;
 - JS: Compilation from TS to JS in ./src;
+- JS: Parsing using Babel in ./src;
 - JS: Uglify of each JS aiming minification which will be sent to ./dist.
 
 ## Details
