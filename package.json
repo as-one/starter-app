@@ -1,5 +1,5 @@
 {
-  "name": "as-one-starter",
+  "name": "@as-one/starter",
   "version": "1.0.0",
   "description": "The ideal boilerplate to start projects on HTML, CSS/SCSS, Vanilla JS, and TypeScript.",
   "main": "src/index.js",
