@@ -22,9 +22,8 @@
 ## Quick Start
 
 ```
-npm i
-npm run dev
-npm run build
+npm i -g @as-one/starter
+create-starter-app
 ```
 
 ## Status
