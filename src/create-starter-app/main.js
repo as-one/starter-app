@@ -11,9 +11,9 @@ const access = promisify(fs.access);
 const copy = promisify(ncp);
 
 async function copyTemplateFiles(options) {
- return copy(options.templateDir, options.targetDir, {
-   clobber: false,
- });
+  return copy(options.templateDir, options.targetDir, {
+    clobber: false,
+  });
 }
 
 async function initGit(options) {
@@ -24,7 +24,7 @@ async function initGit(options) {
     return Promise.reject(new Error('Failed to initialize git'));
   }
   return;
- }
+}
 
 export async function createStarterApp(options) {
   options = {

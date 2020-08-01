@@ -22,7 +22,7 @@
 ## Quick Start
 
 ```
-npm i -g @as-one/starter
+npm i -g as-one/starter
 create-starter-app
 ```
 
