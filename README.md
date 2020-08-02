@@ -3,7 +3,7 @@
 
 <p align="center">
   <a href="https://github.com/as-one/starter-app">
-    <img src="https://raw.githubusercontent.com/as-one/starter-app/master/starter.png" alt="As One - Starter App" width="328" height="122">
+    <img src="https://raw.githubusercontent.com/as-one/starter-app/master/starter.png" alt="As One - Starter App" width="330" height="128">
   </a>
 </p>
 
