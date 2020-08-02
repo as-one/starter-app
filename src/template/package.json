@@ -1,23 +1,14 @@
 {
-  "name": "as-one-starter",
+  "name": "my-starter-app",
   "version": "1.0.0",
-  "description": "The ideal boilerplate to start projects on HTML, CSS/SCSS, Vanilla JS, and TypeScript.",
+  "description": "",
   "main": "src/index.html",
   "scripts": {
     "build": "node bin/build.js",
     "dev": "node bin/dev.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/as-one/starter.git"
-  },
   "keywords": [],
-  "author": "As One",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/as-one/starter/issues"
-  },
-  "homepage": "https://github.com/as-one/starter#readme",
+  "author": "",
   "devDependencies": {
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.0",
