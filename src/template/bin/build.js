@@ -1,8 +1,12 @@
 const { exec } = require('child_process');
 
+const commandsInitialize = [
+  "rm -Rf dist",
+];
+
 const commandsHTML = [
   // Copy HTML from src to dist
-  "copyfiles *.html src/*.html src/**/*.html src/**/**/*.html dist",
+  "copyfiles src/*.html src/**/*.html src/**/**/*.html dist",
 
   // HTML Minifier in dist
   "foreach -g 'dist/*.html' -x 'html-minifier #{path} -o #{path} --collapse-whitespace'",
@@ -47,11 +51,20 @@ const commandsJS = [
   "foreach -g 'dist/src/**/**/*.html' -x 'replace-in-file .js .min.js #{path}'",
 ];
 
+const commandsWrapUp = [
+  // Move dist/src to dist
+  "mv dist/src/* dist",
+
+  // Remove empty folder dist/src
+  "rm -R dist/src"
+];
+
 const commands = [
-  "rm -Rf dist",
+  ...commandsInitialize,
   ...commandsHTML,
   ...commandsCSS,
-  ...commandsJS
+  ...commandsJS,
+  ...commandsWrapUp
 ];
 
 async function asyncForEach(array, callback) {
