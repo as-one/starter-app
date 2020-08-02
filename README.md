@@ -2,8 +2,8 @@
 <br>
 
 <p align="center">
-  <a href="https://github.com/as-one/starter">
-    <img src="https://raw.githubusercontent.com/as-one/starter/master/starter.png" alt="As One - Starter Kit" width="328" height="122">
+  <a href="https://github.com/as-one/starter-app">
+    <img src="https://raw.githubusercontent.com/as-one/starter-app/master/starter.png" alt="As One - Starter App" width="328" height="122">
   </a>
 </p>
 
@@ -14,9 +14,9 @@
   The ideal boilerplate to start projects with HTML, CSS/SCSS, Vanilla JS, and TypeScript.
   <br>
   <br>
-  <a href="https://github.com/as-one/starter/issues/new">Report bug</a>
+  <a href="https://github.com/as-one/starter-app/issues/new">Report bug</a>
   ·
-  <a href="https://github.com/as-one/starter/issues/new">Request feature</a>
+  <a href="https://github.com/as-one/starter-app/issues/new">Request feature</a>
 </p>
 
 ## Quick Start
