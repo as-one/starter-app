@@ -4,27 +4,9 @@
   "description": "",
   "main": "src/index.html",
   "scripts": {
-    "build": "node bin/build.js",
-    "dev": "node bin/dev.js"
+    "build": "starter-app-build",
+    "dev": "starter-app-dev"
   },
   "keywords": [],
-  "author": "",
-  "devDependencies": {
-    "@babel/cli": "^7.10.5",
-    "@babel/core": "^7.11.0",
-    "autoprefixer": "^9.8.5",
-    "clean-css-cli": "^4.3.0",
-    "copyfiles": "^2.3.0",
-    "html-minifier": "^4.0.0",
-    "live-server": "^1.2.1",
-    "node-sass": "^4.14.1",
-    "npm-run-all": "^4.1.5",
-    "postcss-cli": "^7.1.1",
-    "recursive-tsc": "^1.0.5",
-    "replace-in-file": "^6.1.0",
-    "tsc-watch": "^4.2.9",
-    "typescript": "^3.9.7",
-    "uglifyjs-folder": "^2.0.0",
-    "foreach-cli": "^1.8.1"
-  }
+  "author": ""
 }
