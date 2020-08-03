@@ -7,6 +7,9 @@
     "build": "starter-app-build",
     "dev": "starter-app-dev"
   },
+  "devDependencies": {
+    "@as-one/starter-app": "github:as-one/starter-app"
+  },
   "keywords": [],
   "author": ""
 }
