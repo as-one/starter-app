@@ -7,6 +7,10 @@
     "@as-one/starter-app": "bin/create-starter-app",
     "create-starter-app": "bin/create-starter-app"
   },
+  "scripts": {
+    "build": "node bin/build.js",
+    "dev": "node bin/dev.js"
+  },
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
