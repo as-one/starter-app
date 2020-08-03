@@ -21,8 +21,8 @@ npm run build
 This command will initialize sequentially:
 
 - HTML: Conversion from .css to .min.css;
-- HTML: Minification of index.html to ./dist;
-- CSS: Compilation of all SASS in ./src to to one minified CSS file ./dist/style.min.css;
+- HTML: Minification from ./src to ./dist;
+- CSS: Compilation of all SASS in ./src to one minified CSS file ./dist/style.min.css;
 - CSS: Parsing of minified CSS using PostCSS's Autoprefixer;
 - JS: Compilation from TS to JS in ./src;
 - JS: Parsing using Babel in ./src;
