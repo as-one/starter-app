@@ -5,11 +5,11 @@
   "main": "src/index.js",
   "bin": {
     "@as-one/starter-app": "bin/create-starter-app",
-    "create-starter-app": "bin/create-starter-app"
-  },
-  "scripts": {
-    "build": "node bin/build.js",
-    "dev": "node bin/dev.js"
+    "create-starter-app": "bin/create-starter-app",
+    "@as-one/starter-app-build": "bin/build",
+    "@as-one/starter-app-dev": "bin/dev",
+    "starter-app build": "bin/build",
+    "starter-app dev": "bin/dev"
   },
   "publishConfig": {
     "access": "public",
