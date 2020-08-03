@@ -4,10 +4,7 @@
   "description": "The ideal boilerplate to start projects on HTML, CSS/SCSS, Vanilla JS, and TypeScript.",
   "main": "src/index.js",
   "bin": {
-    "@as-one/starter-app": "bin/create-starter-app",
     "create-starter-app": "bin/create-starter-app",
-    "@as-one/starter-app-build": "bin/build",
-    "@as-one/starter-app-dev": "bin/dev",
     "starter-app build": "bin/build",
     "starter-app dev": "bin/dev"
   },
