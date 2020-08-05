@@ -50,8 +50,8 @@ This command will initialize at the same time:
 
 Options:
 
-- --input or -i: Defines the input folder;
-- --output or -o: Defines the output folder;
+- --input or -i: Defines the input folder. Default: src;
+- --output or -o: Defines the output folder. Default: dist;
 
 Examples:
 
@@ -78,8 +78,8 @@ This command will initialize sequentially:
 
 Options:
 
-- --input or -i: Defines the input folder;
-- --output or -o: Defines the output folder;
+- --input or -i: Defines the input folder. Default: src;
+- --output or -o: Defines the output folder. Default: dist;
 
 Examples:
 
