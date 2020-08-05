@@ -11,7 +11,7 @@
 <br>
 
 <p align="center">
-  The ideal boilerplate to start projects with HTML, CSS/SCSS, Vanilla JS, and TypeScript.
+  The ideal boilerplate to start MPA projects with HTML, CSS/SCSS, Vanilla JS, and TypeScript.
   <br>
   <br>
   <a href="https://github.com/as-one/starter-app/issues/new">Report bug</a>
@@ -48,6 +48,18 @@ This command will initialize at the same time:
 - A watcher SASS to CSS from ./src;
 - A watcher TS to JS from ./src;
 
+Options:
+
+- --input or -i: Defines the input folder;
+- --output or -o: Defines the output folder;
+
+Examples:
+
+```
+npm run dev --i newSrc --o newDist
+npm run dev --input newSrc --output newDist
+```
+
 ## Production
 
 ```
@@ -63,6 +75,18 @@ This command will initialize sequentially:
 - JS: Compilation from TS to JS in ./src;
 - JS: Parsing using Babel in ./src;
 - JS: Uglify of each JS aiming minification which will be sent to ./dist.
+
+Options:
+
+- --input or -i: Defines the input folder;
+- --output or -o: Defines the output folder;
+
+Examples:
+
+```
+npm run build --i newSrc --o newDist
+npm run build --input newSrc --output newDist
+```
 
 ## Details
 
