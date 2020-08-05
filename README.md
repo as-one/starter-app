@@ -50,8 +50,8 @@ This command will initialize at the same time:
 
 Options:
 
-- --input or -i: Defines the input folder. Default: src;
-- --output or -o: Defines the output folder. Default: dist;
+- --input or -i: Defines the input folder starting from the --root. Default: src;
+- --output or -o: Defines the output folder starting from the --root. Default: dist;
 - --root or -r: Defines the root folder to run the server. Default: /;
 
 Examples:
