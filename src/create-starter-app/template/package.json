@@ -4,8 +4,8 @@
   "description": "",
   "main": "src/index.html",
   "scripts": {
-    "build": "starter-app-build",
-    "dev": "starter-app-dev"
+    "build": "starter-app-build -i src -o dist",
+    "dev": "starter-app-dev -i src -o dist"
   },
   "devDependencies": {
     "@as-one/starter-app": "github:as-one/starter-app"
