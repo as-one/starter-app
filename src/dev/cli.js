@@ -19,7 +19,7 @@ function parseArgumentsIntoOptions(rawArgs) {
   return {
     input: args['--input'] || 'src',
     output: args['--output'] || 'dist',
-    root: args['--root'] || null
+    root: args['--root'] || './'
   }
 }
 
