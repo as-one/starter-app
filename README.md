@@ -52,12 +52,13 @@ Options:
 
 - --input or -i: Defines the input folder. Default: src;
 - --output or -o: Defines the output folder. Default: dist;
+- --root or -r: Defines the root folder to run the server. Default: /;
 
 Examples:
 
 ```
-npm run dev --i newSrc --o newDist
-npm run dev --input newSrc --output newDist
+npm run dev --i newSrc --o newDist -r src
+npm run dev --input newSrc --output newDist --root src
 ```
 
 ## Production
