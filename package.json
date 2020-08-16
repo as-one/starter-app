@@ -10,8 +10,8 @@
   },
   "scripts": {
     "create-starter-app": "bin/create-starter-app",
-    "build": "bin/build -i testing/src -o testing/dist",
-    "dev": "bin/dev -i testing/src -o testing/src --noTS"
+    "build": "bin/build -i testing-src -o testing-dist",
+    "dev": "bin/dev -i testing-src -o testing-src --noTS"
   },
   "publishConfig": {
     "access": "public",

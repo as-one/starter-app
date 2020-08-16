@@ -7,7 +7,13 @@ const commandsInitialize = [
   "rm -Rf dist",
 
   // 2. src->dist: Copy all files from src to dist
-  "copyfiles --up 2 src/*.* src/**/*.* src/**/**/*.* src/**/**/**/*.* dist",
+  "copyfiles src/*.* src/**/*.* src/**/**/*.* src/**/**/**/*.* dist",
+
+  // 3. Move dist/src to dist
+  "mv dist/src/* dist",
+
+  // 4. dist/src: Remove folder
+  "rm -Rf dist/src"
 ];
 
 const commandsHTML = [
@@ -21,13 +27,15 @@ const commandsCSS = [
   "node-sass -r dist -o dist",
 
   // 2. dist: CSS to .min.css
-  "foreach -g 'dist/**/**/**/*.css' -x 'cleancss --source-map -o #{dir}/#{name}.min.css #{path}'",
+  // "foreach -g 'dist/**/**/**/*.css' -x 'cleancss --source-map -o #{dir}/#{name}.min.css #{path}'",
+  "foreach -g 'dist/**/**/**/*.css' -x 'cleancss --source-map -o #{dir}/#{name}.css #{path}'",
 
   // 3. dist: PostCSS + Autoprefixer in .min.css
-  "foreach -g 'dist/**/**/**/*.min.css' -x 'postcss #{path} --use autoprefixer -r'",
+  // "foreach -g 'dist/**/**/**/*.min.css' -x 'postcss #{path} --use autoprefixer -r'",
+  "foreach -g 'dist/**/**/**/*.css' -x 'postcss #{path} --use autoprefixer -r'",
 
   // 4. dist/*.html: Replace in HTML .css for .min.css
-  "foreach -g 'dist/**/**/**/**/*.html' -x 'replace-in-file .css .min.css #{path}'",
+  // "foreach -g 'dist/**/**/**/**/*.html' -x 'replace-in-file .css .min.css #{path}'",
 ];
 
 const commandsJS = [
@@ -36,20 +44,21 @@ const commandsJS = [
   "foreach -g 'dist/**/**/**/*.ts' -x 'tsc #{path}'",
 
   // 2. dist: JS to .min.js
-  "uglifyjs-folder dist -eo dist --pattern '**/*.js,!**/*min.js'",
+  // "uglifyjs-folder dist -eo dist --pattern '**/*.js,!**/*min.js'",
+  "uglifyjs-folder dist -eo dist -x .js --pattern '**/*.js,!**/*min.js'",
 
   // 3. dist: Babel
   "babel dist -d dist",
 
   // 4. dist: Replace in HTML .js for .min.js
-  "foreach -g 'dist/**/**/**/**/*.html' -x 'replace-in-file .js .min.js #{path}'",
+  // "foreach -g 'dist/**/**/**/**/*.html' -x 'replace-in-file .js .min.js #{path}'",
 ];
 
 const commandsWrapUp = [
   // 1. dist: Remove CSS, SCSS, JS, and TS
-  "foreach -g 'dist/**/**/**/*.css' -x 'rm #{path}' -i 'dist/**/**/**/*.min.css'",
+  // "foreach -g 'dist/**/**/**/*.css' -x 'rm #{path}' -i 'dist/**/**/**/*.min.css'",
   "foreach -g 'dist/**/**/**/*.scss' -x 'rm #{path}'",
-  "foreach -g 'dist/**/**/**/*.js' -x 'rm #{path}' -i 'dist/**/**/**/*.min.js'",
+  // "foreach -g 'dist/**/**/**/*.js' -x 'rm #{path}' -i 'dist/**/**/**/*.min.js'",
   "foreach -g 'dist/**/**/**/*.ts' -x 'rm #{path}'",
 ];
 
