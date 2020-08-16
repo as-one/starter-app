@@ -52,6 +52,6 @@
     "typescript": "^3.9.7",
     "uglifyjs-folder": "^2.0.0",
     "foreach-cli": "^1.8.1",
-    "concurrently": "^5.2.0"
+    "concurrently": "^5.3.0"
   }
 }
