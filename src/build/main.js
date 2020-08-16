@@ -3,62 +3,55 @@
 const { exec } = require('child_process');
 
 const commandsInitialize = [
-  "rm -Rf dist",
+  "rm -Rf dist"
 ];
 
 const commandsHTML = [
   // Copy HTML from src to dist
-  "copyfiles src/*.html src/**/*.html src/**/**/*.html dist",
+  "copyfiles --up 2 src/*.html src/**/*.html src/**/**/*.html src/**/**/**/*.html dist",
 
   // HTML Minifier in dist
-  "foreach -g 'dist/*.html' -x 'html-minifier #{path} -o #{path} --collapse-whitespace'",
-  "foreach -g 'dist/src/**/**/*.html' -x 'html-minifier #{path} -o #{path} --collapse-whitespace'",
+  "foreach -g 'dist/**/*.html' -x 'html-minifier #{path} -o #{path} --collapse-whitespace'",
 ];
 
 const commandsCSS = [
-  // SASS to CSS in src
+  // 1. src: SASS to CSS
   "node-sass -r src/ -o src/",
 
-  // CSS to .min.css in src
-  "foreach -g 'src/**/**/*.css' -x 'cleancss --source-map -o #{dir}/#{name}.min.css #{path}'",
+  // 2. src: CSS to .min.css
+  "foreach -g 'src/**/**/**/*.css' -x 'cleancss --source-map -o #{dir}/#{name}.min.css #{path}'",
 
-  // PostCSS + Autoprefixer in src
-  "foreach -g 'src/**/**/*.min.css' -x 'postcss #{path} --use autoprefixer -r'",
+  // 3. src: PostCSS + Autoprefixer in .min.css
+  "foreach -g 'src/**/**/**/*.min.css' -x 'postcss #{path} --use autoprefixer -r'",
 
-  // Copy .min.css and .min.css.map from src to dist
-  "copyfiles src/*.min.css src/**/*.min.css src/**/**/*.min.css dist",
-  "copyfiles src/*.min.css.map src/**/*.min.css.map src/**/**/*.min.css.map dist",
+  // 4. src->dist: Copy .min.css and .min.css.map from src to dist
+  "copyfiles --up 2 src/*.min.css src/**/*.min.css src/**/**/*.min.css src/**/**/**/*.min.css dist",
+  "copyfiles --up 2 src/*.min.css.map src/**/*.min.css.map src/**/**/*.min.css.map src/**/**/**/*.min.css.map dist",
 
-  // Remove .min.css and .min.css.map from src
-  "foreach -g 'src/**/**/*.min.css' -x 'rm #{path}'",
-  "foreach -g 'src/**/**/*.min.css.map' -x 'rm #{path}'",
+  // 5. src: Remove .min.css and .min.css.map from src
+  "foreach -g 'src/**/**/**/*.min.css' -x 'rm #{path}'",
+  "foreach -g 'src/**/**/**/*.min.css.map' -x 'rm #{path}'",
 
-  // Replace in HTML in dist
-  "foreach -g 'dist/*.html' -x 'replace-in-file .css .min.css #{path}'",
-  "foreach -g 'dist/src/**/**/*.html' -x 'replace-in-file .css .min.css #{path}'",
+  // 6. dist/*.html: Replace .css for .min.css
+  "foreach -g 'dist/**/**/**/**/*.html' -x 'replace-in-file .css .min.css #{path}'",
 ];
 
 const commandsJS = [
   // TS to JS in src
-  "foreach -g 'src/**/**/*.ts' -x 'tsc #{path}'",
+  "foreach -g 'src/**/**/**/*.ts' -x 'tsc #{path}'",
 
   // JS to .min.js from src to dist
-  "uglifyjs-folder src -eo dist/src --pattern '**/*.js,!**/*min.js'",
+  "uglifyjs-folder src -eo dist --pattern '**/*.js,!**/*min.js'",
 
   // Babel
   "babel dist -d dist",
 
   // Replace in HTML in dist
-  "foreach -g 'dist/*.html' -x 'replace-in-file .js .min.js #{path}'",
-  "foreach -g 'dist/src/**/**/*.html' -x 'replace-in-file .js .min.js #{path}'",
+  "foreach -g 'dist/**/**/**/**/*.html' -x 'replace-in-file .js .min.js #{path}'",
 ];
 
 const commandsWrapUp = [
-  // Move dist/src to dist
-  "mv dist/src/* dist",
-
-  // Remove empty folder dist/src
-  "rm -R dist/src"
+  // None
 ];
 
 const commands = [

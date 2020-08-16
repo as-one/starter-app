@@ -1,12 +1,15 @@
 {
   "name": "@as-one/starter-app",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "The ideal boilerplate to start projects on HTML, CSS/SCSS, Vanilla JS, and TypeScript.",
   "main": "src/index.js",
   "bin": {
     "create-starter-app": "bin/create-starter-app",
     "starter-app-build": "bin/build",
     "starter-app-dev": "bin/dev"
+  },
+  "scripts": {
+    "build": "bin/build -i testing/src -o testing/dist"
   },
   "publishConfig": {
     "access": "public",
@@ -26,7 +29,7 @@
     "url": "https://github.com/as-one/starter-app/issues"
   },
   "homepage": "https://github.com/as-one/starter-app#readme",
-  "dependencies": {
+  "devDependencies": {
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.0",
     "autoprefixer": "^9.8.5",
