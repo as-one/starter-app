@@ -26,7 +26,7 @@ const commandsCSS = [
   // 3. dist: PostCSS + Autoprefixer in .min.css
   "foreach -g 'dist/**/**/**/*.min.css' -x 'postcss #{path} --use autoprefixer -r'",
 
-  // 6. dist/*.html: Replace in HTML .css for .min.css
+  // 4. dist/*.html: Replace in HTML .css for .min.css
   "foreach -g 'dist/**/**/**/**/*.html' -x 'replace-in-file .css .min.css #{path}'",
 ];
 
@@ -46,7 +46,7 @@ const commandsJS = [
 ];
 
 const commandsWrapUp = [
-  // dist: Remove CSS, SCSS, JS, and TS
+  // 1. dist: Remove CSS, SCSS, JS, and TS
   "foreach -g 'dist/**/**/**/*.css' -x 'rm #{path}' -i 'dist/**/**/**/*.min.css'",
   "foreach -g 'dist/**/**/**/*.scss' -x 'rm #{path}'",
   "foreach -g 'dist/**/**/**/*.js' -x 'rm #{path}' -i 'dist/**/**/**/*.min.js'",
