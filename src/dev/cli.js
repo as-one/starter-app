@@ -7,6 +7,7 @@ function parseArgumentsIntoOptions(rawArgs) {
       '--input': String,
       '--output': String,
       '--root': String,
+      '--noTS': Boolean,
       '-i': '--input',
       '-o': '--output',
       '-r': '--root'
@@ -19,7 +20,8 @@ function parseArgumentsIntoOptions(rawArgs) {
   return {
     input: args['--input'] || 'src',
     output: args['--output'] || 'dist',
-    root: args['--root'] || '.'
+    root: args['--root'] || '.',
+    noTS: args['--noTS'] ? true : false
   }
 }
 
