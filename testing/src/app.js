@@ -1,4 +1,3 @@
-"use strict";
 console.log('a');
 console.log('b');
 console.log('c');
@@ -8,3 +7,4 @@ console.log('f');
 console.log('g');
 console.log('h');
 console.log('i');
+console.log('j');
