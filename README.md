@@ -53,15 +53,16 @@ Options:
 - --input or -i: Defines the input folder starting from the --root. Default: src;
 - --output or -o: Defines the output folder starting from the --root. Default: dist;
 - --root or -r: Defines the root folder to run the server. Default: /;
+- --noTS: If the project doesn't have TS files this flag must be set;
 
 Examples:
 
 ```
 npm run dev --i newSrc --o newDist -r src
-npm run dev --input newSrc --output newDist --root src
+npm run dev --input newSrc --output newDist --root src --noTS
 ```
 
-## Production
+## Build
 
 ```
 npm run build

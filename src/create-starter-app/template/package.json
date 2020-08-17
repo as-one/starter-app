@@ -5,7 +5,8 @@
   "main": "src/index.html",
   "scripts": {
     "build": "starter-app-build -i src -o dist",
-    "dev": "starter-app-dev -i src -o dist"
+    "dev": "starter-app-dev -i src -o dist",
+    "prod": "starter-app-dev -i dist -o dist"
   },
   "devDependencies": {
     "@as-one/starter-app": "github:as-one/starter-app"
